@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="이준영(joonyoung lee)의 개발자 포트폴리오 사이트입니다." />
+  <title>이준영 | 개발자 포트폴리오</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1f2937;
+      --accent: #3b82f6;
+    }
+    [data-theme="dark"] {
+      --bg: #1f2937;
+      --text: #f3f4f6;
+      --accent: #60a5fa;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header, footer {
+      background-color: var(--accent);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 40px;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 50px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #e2e8f0;
+      padding: 20px;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+
+    .project-card:hover {
+      transform: scale(1.02);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .dark-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      background: none;
+      border: 1px solid white;
+      padding: 5px 10px;
+      color: white;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>이준영 (Joonyoung Lee)</h1>
+    <p>동양미래대학교 컴퓨터소프트웨어공학과 | 前 시큐레이어 근무</p>
+    <nav aria-label="Main Navigation">
+      <a href="#about">소개</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#resume">이력</a>
+      <a href="#contact">연락</a>
+    </nav>
+    <button class="dark-toggle" onclick="toggleTheme()">🌙 다크모드</button>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>소개</h2>
+      <p>안녕하세요, 개발자 이준영입니다. 현재 동양미래대학교 컴퓨터소프트웨어공학과에 재학 중이며, 보안 전문 기업 시큐레이어에서 1년간 재직하며 현장 경험을 쌓았습니다. 웹 개발, 보안, 백엔드 설계에 관심이 많습니다.</p>
+    </section>
+
+    <section id="projects">
+      <h2>프로젝트</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>포트폴리오 웹사이트</h3>
+          <p>HTML, CSS, JS 기반의 반응형 개인 포트폴리오</p>
+        </div>
+        <div class="project-card">
+          <h3>도서 관리 시스템</h3>
+          <p>학교 과제로 제작한 간단한 도서 CRUD 시스템</p>
+        </div>
+        <div class="project-card">
+          <h3>보안 로그인 데모</h3>
+          <p>해시 기반 인증 시스템 (SHA256, JS)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume">
+      <h2>이력</h2>
+      <ul>
+        <li><strong>학력:</strong> 동양미래대학교 컴퓨터소프트웨어공학과 재학</li>
+        <li><strong>경력:</strong> 시큐레이어(SECULAYER) 보안 소프트웨어 부서, 1년 근무</li>
+        <li><strong>기술스택:</strong> HTML, CSS, JavaScript, Python, Git, React (학습중)</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>연락처</h2>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">메시지</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">전송</button>
+      </form>
+      <p>또는 직접 이메일 보내기: <a href="mailto:joonyoung@example.com">joonyoung@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/joonyoung-lee
